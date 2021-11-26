@@ -219,7 +219,7 @@ function PageLayout({ title, status = "", format, searchName }) {
                 <div className="row">
                   {[1, 2, 3, 4].map((n) => {
                     return (
-                      <div className="col-lg-3 col-md-4 col-4 mb-3" key={n}>
+                      <div className="col-lg-3 col-md-4 col-6 mb-3" key={n}>
                         <CardSkeleton></CardSkeleton>
                       </div>
                     );
