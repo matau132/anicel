@@ -51,7 +51,6 @@ function RecentlyWatched() {
               }
             }
           });
-          console.log(newList);
           setRecentlyList(newList);
 
           if (window.screen.width > 575) {
