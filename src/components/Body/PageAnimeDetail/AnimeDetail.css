@@ -1,0 +1,90 @@
+.anime-detail-banner {
+  width: 100%;
+  height: 400px;
+}
+.anime-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+.anime-detail-banner-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    77deg,
+    rgba(0, 0, 0, 0.8) 25%,
+    transparent 85%
+  );
+  background-color: transparent;
+}
+.anime-detail-basic-info {
+  margin-top: -6rem;
+  z-index: 10;
+  padding: 0 15px;
+}
+.anime-detail-image {
+  width: 185px;
+  height: 330px;
+}
+.anime-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.anime-detail-watch-btn {
+  border-radius: 0.375rem;
+  background: var(--primary-color);
+  padding: 12px 22px;
+  margin-top: 4px;
+}
+.anime-detail-watch-btn i {
+  font-size: 80%;
+}
+.anime-detail-watch-btn:hover {
+  background: #391ad7;
+}
+.rounded-separator {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: rgba(119, 118, 118, 1);
+  margin-bottom: 2px;
+}
+.anime-detail-genre {
+  color: #fff;
+}
+.anime-detail-advance-info p {
+  margin: 0;
+  color: rgba(156, 163, 175, 1);
+}
+
+.anime-detail-related .card {
+  padding: 1vw;
+}
+.anime-detail-related img {
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .anime-detail-related img {
+    height: 250px !important;
+  }
+}
+@media (max-width: 767px) {
+  .anime-detail-banner {
+    height: 220px;
+  }
+  .anime-detail-banner-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+@media (max-width: 400px) {
+  .anime-detail-related img {
+    height: 170px !important;
+  }
+}

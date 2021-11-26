@@ -1,0 +1,30 @@
+.card-wrapper .card-img-top {
+  max-width: 100%;
+  height: 315px;
+  object-fit: cover;
+}
+.anime-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-wrapper .card-body {
+  padding-top: 2vw;
+}
+
+@media (max-width: 767px) {
+  .anime-card-title {
+    font-size: 1rem;
+  }
+  .anime-card-body {
+    font-size: .8rem !important;
+  }
+}
+@media (max-width: 575px) {
+  .anime-card-title {
+    font-size: .9rem;
+  }
+  .anime-card-body {
+    font-size: .7rem !important;
+  }
+}

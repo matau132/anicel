@@ -1,0 +1,39 @@
+.recommend-title {
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.recommend-img{
+    overflow: hidden;
+}
+.recommend-img img {
+  width: 73px;
+  height: 73px;
+  object-fit: cover;
+}
+
+.recommend-anime-wrapper{
+    transition: .3s ease-out;
+}
+.recommend-anime-wrapper:hover{
+    transform: scale(1.2);
+    transform-origin: center
+}
+.recommend-info {
+  width: 63%;
+}
+.sidebar .intro {
+  padding-top: 25px;
+}
+
+@media (max-width: 991px) {
+  .sidebar .intro {
+    padding-top: 0;
+  }
+  .recommend-anime-wrapper:hover{
+    transform: scale(1.2);
+    transform-origin: left
+}
+}

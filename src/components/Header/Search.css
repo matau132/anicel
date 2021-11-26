@@ -1,0 +1,47 @@
+.search-title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: -1.6px;
+}
+.search-icon-direct {
+  position: absolute;
+  color: var(--primary-p-color) !important;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem !important;
+  padding: 7px;
+  overflow: hidden;
+  background-color: #000;
+}
+.search-anime-input:focus ~ .search-icon-direct {
+  color: var(--primary-t-color) !important;
+}
+#search .modal-body {
+  padding: 0;
+  margin: 2rem;
+  overflow: scroll;
+}
+#search .modal-body::-webkit-scrollbar-corner {
+  display: none;
+}
+#search .modal-body::-webkit-scrollbar {
+  width: 3px;
+}
+.search-anime-item img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.search-img-wrapper {
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.search-anime-item {
+  color: #fff;
+}
+.search-anime-item:hover img {
+  transform: scale(1.2);
+}

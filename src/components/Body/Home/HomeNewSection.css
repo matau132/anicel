@@ -1,0 +1,35 @@
+.home-content-nav .nav .active h5 {
+  color: var(--primary-color);
+}
+.home-content-nav .nav .item-nav {
+  margin-right: 15px !important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  transition: color 0.3s;
+}
+.home-new-anime .card {
+  padding: 1vw;
+}
+@media (max-width: 767px) {
+  .home-new-anime img {
+    height: 310px !important;
+  }
+}
+@media (max-width: 575px) {
+  .home-new-anime img {
+    height: 200px !important;
+  }
+}
+@media (max-width: 400px) {
+  .home-new-anime img {
+    height: 125px !important;
+  }
+}

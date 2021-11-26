@@ -1,0 +1,26 @@
+.body-search-section p {
+  color: var(--light);
+}
+.search-name {
+  color: var(--light);
+}
+.search-name .fa-search {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  padding: 15px;
+}
+.search-name .search-input {
+  height: 46px;
+  color: var(--light);
+  padding-left: 46px;
+  width: 240px;
+  background-color: #403f3f;
+  border: none;
+  border-radius: 0.3rem;
+}
+.search-name .search-input::placeholder {
+  color: var(--light) !important;
+}
