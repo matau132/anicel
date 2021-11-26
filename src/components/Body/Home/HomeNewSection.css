@@ -28,8 +28,3 @@
     height: 200px !important;
   }
 }
-@media (max-width: 400px) {
-  .home-new-anime img {
-    height: 125px !important;
-  }
-}

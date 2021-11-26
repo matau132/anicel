@@ -12,8 +12,3 @@
     height: 200px !important;
   }
 }
-@media (max-width: 400px) {
-  .list-anime-detail-wrapper img {
-    height: 125px !important;
-  }
-}

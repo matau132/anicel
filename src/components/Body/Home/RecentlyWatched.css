@@ -1,6 +1,9 @@
 .recently-card {
   height: 100% !important;
 }
+.recently-card .card{
+  padding: 1vw;
+}
 .recently-watched-wrapper .swiper-pagination-progressbar {
   top: 99% !important;
 }
@@ -25,6 +28,6 @@
 }
 @media (max-width: 400px) {
   .recently-watched-wrapper .card-img-top {
-    height: 165px;
+    height: 200px;
   }
 }
