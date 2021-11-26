@@ -2,6 +2,7 @@ import React, { memo, useEffect, useRef } from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo.jpg";
+import _ from "lodash";
 
 function Nav() {
   const navbar = useRef();
@@ -12,23 +13,22 @@ function Nav() {
       navbar.current.style.display = "none";
     }
 
-    const handleWindowScroll = (e) => {
+    const handleWindowScroll = _.debounce((e) => {
       let scrollPosition = window.scrollY;
+      console.log(scrollPosition);
       if (!navbar.current.classList.contains("relative")) {
         if (scrollPosition > initialScrollPosition) {
-          navbar.current.style.display = "none";
-        } else {
           if (scrollPosition < 76) {
             navbar.current.style.display = "flex";
-            navbar.current.classList.remove("navbar-sticky");
           } else {
-            navbar.current.style.display = "flex";
-            navbar.current.classList.add("navbar-sticky");
+            navbar.current.style.display = "none";
           }
+        } else {
+          navbar.current.style.display = "flex";
         }
       }
       initialScrollPosition = scrollPosition;
-    };
+    }, 200);
     window.addEventListener("scroll", handleWindowScroll);
     return () => {
       window.removeEventListener("scroll", handleWindowScroll);
@@ -37,7 +37,7 @@ function Nav() {
 
   return (
     /* Navbar */
-    <nav className="navbar navbar-expand" ref={navbar}>
+    <nav className="navbar navbar-expand navbar-sticky" ref={navbar}>
       <div className="container header">
         {/* Navbar Brand*/}
         <NavLink className="navbar-brand mr-auto" to="/" exact>
