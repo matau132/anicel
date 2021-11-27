@@ -2,7 +2,7 @@
   height: 100% !important;
 }
 .recently-card .card{
-  padding: 1vw;
+  padding: .5vw;
 }
 .recently-watched-wrapper .swiper-pagination-progressbar {
   top: 99% !important;
@@ -14,16 +14,18 @@
     var(--secondary-color)
   ) !important;
 }
-
+.recently-watched-wrapper .swiper-wrapper{
+  padding-bottom: 20px;
+}
 @media (max-width: 767px) {
   .recently-watched-wrapper .card-img-top {
-    height: 247px;
+    height: 250px;
   }
 }
 
 @media (max-width: 575px) {
   .recently-watched-wrapper .card-img-top {
-    height: 288px;
+    height: 290px;
   }
 }
 @media (max-width: 400px) {

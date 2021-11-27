@@ -16,15 +16,15 @@
   transition: color 0.3s;
 }
 .home-new-anime .card {
-  padding: 1vw;
+  padding: .5vw;
 }
 @media (max-width: 767px) {
   .home-new-anime img {
-    height: 310px !important;
+    height: 350px !important;
   }
 }
 @media (max-width: 575px) {
   .home-new-anime img {
-    height: 200px !important;
+    height: 225px !important;
   }
 }

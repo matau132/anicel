@@ -1,14 +1,14 @@
 .list-anime-detail-wrapper .card {
-  padding: 1vw;
+  padding: .5vw;
 }
 @media (max-width: 767px) {
   .list-anime-detail-wrapper img {
-    height: 310px !important;
+    height: 350px !important;
   }
 }
 
 @media (max-width: 575px) {
   .list-anime-detail-wrapper img {
-    height: 200px !important;
+    height: 225px !important;
   }
 }

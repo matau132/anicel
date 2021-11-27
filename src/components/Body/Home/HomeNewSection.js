@@ -119,7 +119,7 @@ function HomeNewSection() {
           {!loading &&
             animeList.map((data) => {
               return (
-                <div className="col-lg-4 col-md-4 col-6 mb-3" key={data.id}>
+                <div className="col-lg-4 col-md-4 col-6 mb-4" key={data.id}>
                   <Card anime={data} rating={true}></Card>
                 </div>
               );
@@ -127,7 +127,7 @@ function HomeNewSection() {
           {loading &&
             [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => {
               return (
-                <div className="col-lg-4 col-md-4 col-6 mb-3" key={n}>
+                <div className="col-lg-4 col-md-4 col-6 mb-4" key={n}>
                   <CardSkeleton></CardSkeleton>
                 </div>
               );

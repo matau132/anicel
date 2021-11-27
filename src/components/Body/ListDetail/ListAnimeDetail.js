@@ -18,7 +18,7 @@ function ListAnimeDetail({ animeList, loadMore, hasMore }) {
           {animeList.map((data) => {
             return (
               <LazyLoad
-                className="col-lg-3 col-md-4 col-6 mb-3"
+                className="col-lg-3 col-md-4 col-6 mb-4"
                 key={data.id}
                 offset={-100}
                 placeholder={<CardSkeleton />}

@@ -3,6 +3,9 @@
   height: 315px;
   object-fit: cover;
 }
+.card-wrapper .card {
+  background-color: var(--primary-bg-color);
+}
 .anime-card-title {
   white-space: nowrap;
   overflow: hidden;
@@ -17,14 +20,14 @@
     font-size: 1rem;
   }
   .anime-card-body {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
 }
 @media (max-width: 575px) {
   .anime-card-title {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .anime-card-body {
-    font-size: .7rem !important;
+    font-size: 0.7rem !important;
   }
 }
