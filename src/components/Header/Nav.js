@@ -15,7 +15,6 @@ function Nav() {
 
     const handleWindowScroll = _.debounce((e) => {
       let scrollPosition = window.scrollY;
-      console.log(scrollPosition);
       if (!navbar.current.classList.contains("relative")) {
         if (scrollPosition > initialScrollPosition) {
           if (scrollPosition < 76) {

@@ -160,7 +160,7 @@ function PageLayout({ title, status = "", format, searchName }) {
   }, []);
 
   useEffect(() => {
-    if (!firstRender.current) {
+    if (!firstRender.current && pathname.includes("/search")) {
       history.push("/search");
     }
   }, [name, genre, year, season]);
