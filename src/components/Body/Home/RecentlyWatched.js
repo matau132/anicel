@@ -44,13 +44,17 @@ function RecentlyWatched() {
       if (mounted.current) {
         if (!isError && response.status_code === 200) {
           const rawList = response.data.documents;
-          const newList = list.map((data) => {
+          const newList = list.reduce((final, data) => {
             for (let anime of rawList) {
               if (parseInt(data.id) === anime.id) {
-                return { ...anime, watched: parseInt(data.episode) };
+                return [
+                  ...final,
+                  { ...anime, watched: parseInt(data.episode) },
+                ];
               }
             }
-          });
+            return [...final];
+          }, []);
           setRecentlyList(newList);
 
           if (window.screen.width > 575) {
