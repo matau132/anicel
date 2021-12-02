@@ -1,17 +1,18 @@
 import React, { memo, useEffect, useRef, useState } from "react";
-import ReactHlsPlayer from "react-hls-player";
+import ReactPlayer from "react-player";
 import { useLocation, useParams } from "react-router";
 import AnimeData from "../../../api/GetData";
 
 function PageWatch({ animeSource, animeName }) {
   const { id, episode } = useParams();
   const { pathname, search } = useLocation();
-  const [source, setSource] = useState(animeSource || "");
   const [episodeLink, setEpisodeLink] = useState("");
   const animeData = new AnimeData();
   const mounted = useRef(true);
 
   const getAnimeEpisode = async () => {
+    const param = new URLSearchParams(search);
+    const source = param.get("source") || animeSource;
     const path = `episode?anime_id=${id}&number=${episode}&source=${source}`;
     const { response, isError } = await animeData.getAnimeData(path);
     if (mounted.current) {
@@ -23,7 +24,7 @@ function PageWatch({ animeSource, animeName }) {
     }
   };
 
-  const handlePlay = () => {
+  const handleStart = () => {
     const recentlyList = JSON.parse(localStorage.getItem("recently_watched"));
     if (recentlyList) {
       let newList = recentlyList.filter((anime) => anime.id !== id);
@@ -42,8 +43,6 @@ function PageWatch({ animeSource, animeName }) {
 
   useEffect(() => {
     mounted.current = true;
-    const param = new URLSearchParams(search);
-    setSource(param.get("source"));
     getAnimeEpisode();
     document.title = `${animeName} - Episode ${episode} - Anicel`;
 
@@ -59,15 +58,14 @@ function PageWatch({ animeSource, animeName }) {
 
   return (
     <>
-      <ReactHlsPlayer
-        src={episodeLink}
-        autoPlay={false}
+      <ReactPlayer
+        url={episodeLink}
         controls={true}
         width="100%"
         height="auto"
-        playsInline
-        onPlay={handlePlay}
-      ></ReactHlsPlayer>
+        playsinline={true}
+        onStart={handleStart}
+      ></ReactPlayer>
     </>
   );
 }
