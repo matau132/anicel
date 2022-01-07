@@ -63,19 +63,19 @@ function Footer() {
                 <h4 className="footer-title">Community</h4>
                 <ul>
                   <li>
-                    <a href="https://www.facebook.com/">Facebook</a>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/">Youtube</a>
+                    <a href="https://www.youtube.com/" target="_blank">Youtube</a>
                   </li>
                   <li>
-                    <a href="https://discord.com/">Discord</a>
+                    <a href="https://discord.com/" target="_blank">Discord</a>
                   </li>
                   <li>
-                    <a href="https://github.com/">Github</a>
+                    <a href="https://github.com/" target="_blank">Github</a>
                   </li>
                   <li>
-                    <a href="https://stackoverflow.com/">Stack Overflow</a>
+                    <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
                   </li>
                 </ul>
               </div>
